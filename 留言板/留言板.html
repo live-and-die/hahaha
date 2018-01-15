@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js第五章作业</title>
+	<style>
+		div{
+			width: 400px;
+			margin: 50px auto;
+
+		}
+		form{position: relative;
+			width: 400px;
+			height: 30px;
+			background-color: #666;
+			line-height: 30px;
+		}
+		
+		#text{
+			position: absolute;
+			left: 100px;
+			top: 4px;
+		}
+		#addtext{
+			position: absolute;
+			left: 300px;
+			top: 4px;
+			background-color: orange;
+		}
+		p{  position: absolute;
+			right: 20px;
+			top: -15px;
+			color: #fff;
+			font-weight: bold;
+			text-decoration: none;
+			cursor: pointer;
+		}
+		img{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+		}
+		span{
+			color: #fff;
+			font-weight: bold;
+		}
+		ul{
+			padding: 0px;
+			margin: 0px;
+			border: 1px solid #666;
+		}
+		li{
+			border-bottom: 1px dashed #ccc;
+			list-style: none;
+			line-height: 30px;
+
+		}
+		ul>li>span{
+			color: #000;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<form >
+			<span>最新动态</span>
+			<input id="text" type="text" style="display: none;">
+			<input id="addtext" type="button" style="display: none;" value="添加" ">
+			<p id="jia">+</p>
+		</form>
+		<ul id="hh">
+			
+		</ul>
+	</div>
+		<!-- <img src="images/1.jpg" alt=""  id="img1">
+		<img src="images/2.jpg" alt="" style="display: none;" id="img2"> -->
+</body>
+<script>
+	//通过点击图片来切换图片
+	// var oimg1=document.getElementById("img1")
+	// var oimg2=document.getElementById("img2")
+
+	// oimg1.onclick=function(){
+	// 	this.style.display="none";
+	// 	oimg2.style.display="block";
+	// }
+	// oimg2.onclick=function(){
+	// 	this.style.display="none";
+	// 	oimg1.style.display="block";
+	// }
+
+	var a =document.getElementById("jia");
+	var input1=document.getElementById("text")
+	var input2=document.getElementById("addtext")
+	a.onclick=function(){ 
+		input1.style.display="block";
+		input2.style.display="block";
+	}
+	var objh=document.getElementById("hh");
+	input2.onclick= fn;
+
+	function fn (){
+		var v=input1.value;
+		if (v==0){
+			alert("请输入数据老哥");
+		}
+		else{
+			objh.innerHTML+= "<li><span>"+v+"</span></li>";
+			input1.value = "";//清空input输入框的内容
+	                //val = "";//千万不要理解成提取公因式，这样是错的
+	                input1.style.display = "none"; //让输入框和按钮消失
+	                input2.style.display = "none";
+	        }
+               
+
+	}
+
+</script>
+</html>

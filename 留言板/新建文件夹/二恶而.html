@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>测试</title>
+	<style>
+		#box{
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+	<div id="box" class="weiwie" xiao="handsome">
+		
+	</div>
+	<div id="box2">
+		
+	</div>
+</body>
+<script>
+	var obj=document.getElementById("box");
+	
+	obj.setAttribute("xiao","ugly");
+	var x = obj.getAttribute("xiao");
+	alert(x);
+	var obj=document.getElementById("box2");
+	obj.style="width:100px;height:100px;background-color:pink;";
+	var a =(!(~+[])+{})[--[~+""][+[]]*[~+[]] + ~~!+[]]+({}+[])[[~!+[]]*~+[]];
+	console.log(a);
+</script>
+</html>

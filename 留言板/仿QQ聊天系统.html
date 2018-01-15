@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>空间作业发表</title>
+	<style>
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	#qq{
+		width: 375px;
+		margin: 100px auto;
+	}
+	#txt-wrap{
+		width: 365px;
+		height: 95px;
+		padding: 5px;
+		background-color: rgb(204,204,204);
+		border-radius: 5px;
+	}
+	#txtbox{
+		resize: none;
+	}
+	#aa{
+		display: block;
+		float: left;
+		width: 22px;
+		height: 22px;
+		padding: 2px;
+		background-color: #fff;
+		margin-left: 10px;
+	}
+	#imgo{
+		width: 22px;
+		height: 22px;
+	}
+	#btn{
+		float: right;
+		margin:3px 10px 0 0;
+		width: 65px;
+		height: 22px;
+		background-color: orange;
+		font-weight: bold;
+		font-size: 12;
+		color: #fff;
+		border: none;
+		text-align: center;
+		border-radius: 5px;
+
+	}
+	ul>li{
+		border-bottom: 1px solid #eee;
+		padding: 10px 0px 5px;
+		list-style: none;
+		font-size: 12px
+	}
+	ul>li:after{
+		display: block;
+		content: "";
+		clear: both;
+	}
+	ul>li>img{
+		float: left;
+		width: 30px;
+		height: 30px;
+		margin-left: 10px;
+	}
+	ul>li>span{
+		float: left;
+		width: 300px;
+		vertical-align: top;
+		margin-left: 20px;
+	}
+	</style>	
+</head>
+<body>
+	<div id="qq">
+		<div id="txt-wrap">
+			<div id="txt1">
+				<textarea name="" id="txtbox" cols="60" rows="10" style="width: 356px;height: 60px;"></textarea>
+			</div>
+			<div id="txt2">
+				<a href="javascript:void;" id="aa"><img  id="imgo" src="images/1.jpg" alt=""></a>
+				<button id="btn">发表</button>
+			</div>
+		</div>
+		<ul id="talkbox">			
+		</ul>
+	</div>	
+</body>
+<script>
+	var txtb=document.getElementById("txtbox");
+	var imgoo=document.getElementById("imgo");
+	var btno=document.getElementById("btn");
+	var talko=document.getElementById("talkbox");
+	// 点击切换图片
+	var bool=true;
+	imgoo.onclick=function(){
+		if(bool){
+			imgoo.src="images/2.jpg";
+			bool=false;
+		}
+		else{
+			imgoo.src="images/1.jpg";
+			bool=true;
+		}
+	}
+	// 点击发表添加li子元素
+	btno.onclick=function(){
+		var sro=imgoo.src;
+		var val=txtb.value;
+		talkbox.innerHTML+="<li><img src="+sro+"><span>"+val+"</span></li>"
+		txtb.value="";
+	}
+
+</script>
+</html>

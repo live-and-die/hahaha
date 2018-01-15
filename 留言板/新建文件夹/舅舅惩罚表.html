@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>九九乘法表</title>
+  <style type="text/css">
+  #box{
+	display:inline-block;
+	width:60px;
+	height:25px;
+	line-height:25px;
+	text-align:center;
+	border:1px solid red;
+	margin:15px 10px 0 0;
+
+  } 
+  
+  </style>
+ </head>
+ <body>
+	<div id="boxss">
+	</div>  
+ </body>
+<script>
+	var boxss = document.getElementById("boxss");
+	var str="";
+	
+	<!-- 九九乘法表内容一 -->
+	for(var i = 1; i<10; i++){
+	
+	for(var j = 1; j<=i;j++){
+		str+="<p id='box'>"+j+"*"+i+"="+i*j+"</p>"
+	
+	}	
+		str+="</br>"
+	}
+	boxss.innerHTML+=str;
+	<!-- 舅舅尘发表内容2 -->
+	var str1="";
+	for(var i = 9; i>0; i--){
+	
+	for(var j = 1; j<=i;j++){
+		str1+="<p id='box'>"+j+"*"+i+"="+i*j+"</p>"
+	}	
+		str1+="</br>"
+	}
+	boxss.innerHTML+=str1;
+	
+</script>
+</html>
