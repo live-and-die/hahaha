@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>测试</title>
+	<style>
+		.box{
+			position: relative;
+			width: 500px;
+			height: 500px;
+		}
+		div>div{
+			position: absolute;
+			width: 200px;
+			height: 200px;
+			border: 1px solid red;
+			background-color: red;
+			transform: rotate(45deg);
+		}
+		.left{
+			top: 10px;
+			left: 10px;
+			border-radius: 50%;
+
+		}
+		.right{
+			top: 10px;
+			left:300px;
+			border-radius: 50%;
+		}
+		.down{
+			top: 200px;
+			left:150px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="heart left"></div>
+		<div class="heart down"></div>
+		<div class="heart right"></div>
+	</div>	
+</body>
+<script>
+</script>
+</html>

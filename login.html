@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>25章bom浏览器的方法</title>
+</head>
+<body>
+	 <button id='button1'> 前 </button>
+	  <button id='button2'> 后 </button>
+	   <button id='button3'> 第几个 </button>
+</body>
+<script>
+	var btn = document.getElementsByTagName('button');
+	btn[0].onclick=function(){
+		window.history.back();
+
+	}
+	btn[1].onclick=function(){
+		window.history.forward();
+
+	}
+	btn[2].onclick=function(){
+		var aaa=navigator.userAgent;
+		console.log(aaa);
+
+	}
+</script>
+</html>
